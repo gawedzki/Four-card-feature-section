@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  margin: 92px 32px;
+}
+.header {
+  text-align: center;
+}
+h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid black;
+}
+.col-1 {
+  width: 33.33%;
+}
+.col-2 {
+  width: 100%;
+}
