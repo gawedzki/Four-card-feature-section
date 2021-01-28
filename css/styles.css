@@ -4,7 +4,12 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
-  margin: 92px 32px;
+}
+#body {
+  min-width: 320px;
+  max-width: 1440px;
+  padding: 92px 32px;
+  margin: auto;
 }
 .header {
   text-align: center;
@@ -17,23 +22,52 @@ h2 {
   font-size: 24px;
   font-weight: 400;
 }
+.content {
+}
+.content__card {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid black;
+  margin: 0;
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  clear: left;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-[class*="col-"] {
+.col {
   float: left;
-  padding: 15px;
-  border: 1px solid black;
-}
-.col-1 {
-  width: 33.33%;
-}
-.col-2 {
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .col__mid {
+    float: left;
+  }
+  .content__card {
+    width: 50%;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .col {
+    width: 33.33%;
+  }
+  .col__side {
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+  .col__mid {
+    width: auto;
+    float: none;
+  }
+  .content__card {
+    width: 100%;
+  }
 }
