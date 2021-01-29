@@ -2,33 +2,87 @@
   box-sizing: border-box;
 }
 body {
+  margin: 0;
+  background-color: hsl(0, 0%, 98%);
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+  color: hsl(229, 6%, 66%);
 }
 #body {
   min-width: 320px;
   max-width: 1440px;
-  padding: 92px 32px;
+  padding: 80px 32px 30px 32px;
+  /* border: 1px solid black; control border */
   margin: auto;
 }
 .header {
+  /* border: 1px solid black; control border */
   text-align: center;
 }
+.header > h1 {
+  margin-bottom: 18px;
+}
+.header > p {
+  margin-bottom: 70px;
+}
 h1 {
+  margin: 0;
   font-size: 25px;
   font-weight: 600;
+  color: hsl(234, 12%, 34%);
 }
 h2 {
+  margin: 0;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
 }
-.content {
+p {
+  padding: 0;
+  margin: 0;
+}
+/* .content {
+} */
+.col {
+  float: left;
+  width: 100%;
 }
 .content__card {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid black;
-  margin: 0;
+  max-width: 310px;
+  height: 220px;
+  padding: 20px 28px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px hsl(228 45% 88%);
+  margin: 0 auto 25px auto;
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+}
+.content__card > h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.content__card > p {
+  font-size: 13px;
+}
+.col--left > .content__card:nth-child(1) {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+.col--mid > .content__card:nth-child(1) {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+.col--mid > .content__card:nth-child(2) {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+.col--right > .content__card:nth-child(1) {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+.content__img {
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
 }
 
 .attribution {
@@ -40,13 +94,8 @@ h2 {
   color: hsl(228, 45%, 44%);
 }
 
-.col {
-  float: left;
-  width: 100%;
-}
-
 @media only screen and (min-width: 768px) {
-  .col__mid {
+  .col--mid > .content__card {
     float: left;
   }
   .content__card {
@@ -58,13 +107,13 @@ h2 {
   .col {
     width: 33.33%;
   }
-  .col__side {
+  .col--left,
+  .col--right {
     height: 300px;
     display: flex;
     align-items: center;
   }
-  .col__mid {
-    width: auto;
+  .col--mid > .content__card {
     float: none;
   }
   .content__card {
